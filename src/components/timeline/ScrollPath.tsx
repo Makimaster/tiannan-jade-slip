@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { useI18n } from '../../i18n';
 import { timelineEvents } from '../../data/timeline';
 import EventDetailCard from './EventDetailCard';
@@ -110,7 +111,9 @@ export default function ScrollPath() {
 
       <div className={styles.hint}>{t('timeline.hint')}</div>
 
-      {selected && <EventDetailCard event={selected} onClose={() => setSel(null)} />}
+      <AnimatePresence>
+        {selected && <EventDetailCard event={selected} onClose={() => setSel(null)} />}
+      </AnimatePresence>
     </div>
   );
 }

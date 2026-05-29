@@ -16,10 +16,10 @@ export default function HonorsPanel() {
               <span className={styles.year}>{h.year}</span>
               <div className={styles.itemContent}>
                 <span className={styles.honorTitle}>
-                  {lang === 'zh' ? h.title : h.titleEn}
+                  {lang === 'zh' ? h.title : (h.titleEn ?? h.title)}
                 </span>
                 <span className={styles.honorIssuer}>
-                  {lang === 'zh' ? h.issuer : h.issuerEn}
+                  {lang === 'zh' ? h.issuer : (h.issuerEn ?? h.issuer)}
                 </span>
               </div>
             </div>

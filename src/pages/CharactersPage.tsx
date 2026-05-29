@@ -1,26 +1,14 @@
-import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import { useI18n } from '../i18n';
+import { useVideoBackground } from '../hooks/useVideoBackground';
 import { characters } from '../data/characters';
 import SectionTitle from '../components/common/SectionTitle';
 import styles from './CharactersPage.module.css';
 
 export default function CharactersPage() {
   const { t, lang } = useI18n();
-
-  useEffect(() => {
-    const root = document.getElementById('root');
-    const prevBg = document.body.style.background;
-    const prevPos = root?.style.position || '';
-    const prevZ = root?.style.zIndex || '';
-    document.body.style.background = 'transparent';
-    if (root) { root.style.position = 'relative'; root.style.zIndex = '1'; }
-    return () => {
-      document.body.style.background = prevBg;
-      if (root) { root.style.position = prevPos; root.style.zIndex = prevZ; }
-    };
-  }, []);
+  useVideoBackground();
 
   const video = createPortal(
     <video className={styles.videoBg} src="/videos/characters-bg.mp4" autoPlay loop muted playsInline />,
@@ -52,7 +40,7 @@ export default function CharactersPage() {
                 </p>
                 {ch.status !== 'alive' && (
                   <span className={`${styles.statusBadge} ${styles[ch.status]}`}>
-                    {ch.status === 'deceased' ? '已陨落' : '已退场'}
+                    {t(`characters.status.${ch.status}`)}
                   </span>
                 )}
               </div>

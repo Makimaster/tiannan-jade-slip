@@ -3,6 +3,7 @@ import { useI18n } from '../../i18n';
 import type { TimelineEvent } from '../../types';
 import { EVENT_TYPE_COLORS } from '../../utils/constants';
 import { characters } from '../../data/characters';
+import { artifacts } from '../../data/artifacts';
 import styles from './EventDetailCard.module.css';
 
 interface Props {
@@ -18,7 +19,9 @@ export default function EventDetailCard({ event, onClose }: Props) {
     .map((id) => characters.find((c) => c.id === id))
     .filter((c): c is NonNullable<typeof c> => Boolean(c));
 
-  const relatedArtifacts = event.relatedArtifactIds;
+  const relatedArtifacts = event.relatedArtifactIds
+    .map((id) => artifacts.find((a) => a.id === id))
+    .filter((a): a is NonNullable<typeof a> => Boolean(a));
   const title = lang === 'en' && event.titleEn ? event.titleEn : event.title;
   const timeLabel = lang === 'en' && event.timeLabelEn ? event.timeLabelEn : event.timeLabel;
   const location = lang === 'en' && event.locationEn ? event.locationEn : event.location;
@@ -75,9 +78,9 @@ export default function EventDetailCard({ event, onClose }: Props) {
           <div className={styles.section}>
             <h4 className={styles.sectionTitle}>{t('event.relatedArtifacts')}</h4>
             <div className={styles.artifactList}>
-              {relatedArtifacts.map((id) => (
-                <span key={id} className={styles.artifactItem}>
-                  ···
+              {relatedArtifacts.map((a) => (
+                <span key={a.id} className={styles.artifactItem}>
+                  {lang === 'zh' ? a.name : a.nameEn}
                 </span>
               ))}
             </div>

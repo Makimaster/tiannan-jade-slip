@@ -13,7 +13,10 @@ export default function MusicPlayer() {
     audio.volume = 0.3;
     audioRef.current = audio;
 
-    audio.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    audio.play().then(() => setPlaying(true)).catch((e) => {
+      console.warn('[MusicPlayer] Autoplay blocked:', e);
+      setPlaying(false);
+    });
 
     return () => { audio.pause(); audio.src = ''; };
   }, []);
@@ -25,7 +28,9 @@ export default function MusicPlayer() {
       audio.pause();
       setPlaying(false);
     } else {
-      audio.play().then(() => setPlaying(true)).catch(() => {});
+      audio.play().then(() => setPlaying(true)).catch((e) => {
+        console.warn('[MusicPlayer] Play failed:', e);
+      });
     }
   };
 

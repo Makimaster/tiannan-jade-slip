@@ -58,6 +58,14 @@ export const zh: Record<string, string> = {
   'library.empty': '请输入关键词，贫道为你查阅藏经阁典籍。',
   'library.error': '藏经阁灵脉不稳，请稍后再试。',
   'library.hotQuestions': '热门问道',
+  'library.hotQ.0': '韩立是什么境界？',
+  'library.hotQ.1': '韩立的法宝有哪些？',
+  'library.hotQ.2': '南宫婉和韩立的关系？',
+  'library.hotQ.3': '什么是元婴期？',
+  'library.hotQ.4': '掌天瓶的作用是什么？',
+  'library.hotQ.5': '乱星海有哪些势力？',
+  'library.hotQ.6': '墨大夫的真实身份？',
+  'library.hotQ.7': '大衍诀是什么功法？',
   'library.chapter': '章节',
   'library.score': '相关度',
 
@@ -70,6 +78,8 @@ export const zh: Record<string, string> = {
   'characters.subtitle': '修真界群英录',
   'characters.realm': '境界',
   'characters.affiliation': '宗门',
+  'characters.status.deceased': '已陨落',
+  'characters.status.departed': '已退场',
   'characters.techniques': '功法',
   'characters.relations': '人物关系',
 

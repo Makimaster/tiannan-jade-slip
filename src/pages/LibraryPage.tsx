@@ -4,23 +4,14 @@ import type { SearchResponse } from '../types';
 import SectionTitle from '../components/common/SectionTitle';
 import styles from './LibraryPage.module.css';
 
-const HOT_QUESTIONS = [
-  '韩立是什么境界？',
-  '韩立的法宝有哪些？',
-  '南宫婉和韩立的关系？',
-  '什么是元婴期？',
-  '掌天瓶的作用是什么？',
-  '乱星海有哪些势力？',
-  '墨大夫的真实身份？',
-  '大衍诀是什么功法？',
-];
-
 export default function LibraryPage() {
   const { t } = useI18n();
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [result, setResult] = useState<SearchResponse | null>(null);
+
+  const hotQuestions = Array.from({ length: 8 }, (_, i) => t(`library.hotQ.${i}`));
 
   const search = useCallback(async (q: string) => {
     if (!q.trim()) return;
@@ -80,7 +71,7 @@ export default function LibraryPage() {
           <div className={styles.hotSection}>
             <h3 className={styles.hotTitle}>{t('library.hotQuestions')}</h3>
             <div className={styles.hotGrid}>
-              {HOT_QUESTIONS.map((q, i) => (
+              {hotQuestions.map((q, i) => (
                 <button key={i} className={styles.hotTag} onClick={() => handleHotClick(q)}>
                   {q}
                 </button>

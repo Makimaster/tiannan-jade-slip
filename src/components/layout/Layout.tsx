@@ -10,7 +10,7 @@ export default function Layout() {
   return (
     <>
       <Header />
-      <main style={{ paddingTop: '64px', minHeight: '100vh' }}>
+      <main style={{ paddingTop: 'var(--header-height)', minHeight: '100vh' }}>
         <AnimatePresence mode="wait">
           <PageTransition key={location.pathname}>
             <Outlet />

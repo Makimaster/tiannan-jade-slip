@@ -2,8 +2,8 @@ import { createContext, useContext, useState, type ReactNode } from 'react';
 import { zh } from './zh';
 import { en } from './en';
 
-type Lang = 'zh' | 'en';
-type I18nContextType = {
+export type Lang = 'zh' | 'en';
+export type I18nContextType = {
   lang: Lang;
   t: (key: string) => string;
   toggleLang: () => void;
@@ -11,7 +11,7 @@ type I18nContextType = {
 
 const I18nContext = createContext<I18nContextType>({
   lang: 'zh',
-  t: () => '',
+  t: (key: string) => key,
   toggleLang: () => {},
 });
 

@@ -85,7 +85,7 @@ export const characters: Character[] = [
     affiliation: '黄枫谷', affiliationEn: 'Yellow Maple Valley', description: '黄枫谷女修，温柔清冷，内敛长情。', descriptionEn: 'A female cultivator of Yellow Maple Valley, gentle and reserved, with deep long-lasting feelings.',
     personality: '温柔清冷、内敛长情', personalityEn: 'Gentle & reserved, deep & long-lasting in love',
     techniques: [], relations: [
-      { targetId: 'han-li', targetName: '韩立', relation: '同门', relationEn: 'Fellow Disciple' },
+      { targetId: 'han-li', targetName: '韩立', targetNameEn: 'Han Li', relation: '同门', relationEn: 'Fellow Disciple' },
     ], firstAppearChapter: '黄枫谷篇', firstAppearChapterEn: 'Yellow Maple Valley Arc', status: 'alive', tags: ['越国七派'], ending: '留在天南', endingEn: 'Remained in Tiannan',
   },
   {
@@ -167,7 +167,7 @@ export const characters: Character[] = [
     id: 'hu-laomo', name: '呼老魔', nameEn: 'Hu Laomo', aliases: [], aliasesEn: [], realm: '化神期', realmEn: 'Deity Transformation',
     affiliation: '大晋魔道', affiliationEn: 'Great Jin Demonic Path', description: '大晋魔道巨擘，暴虐凶残。', descriptionEn: 'A giant of the Great Jin Demonic Path, brutal and vicious.',
     personality: '暴虐凶残、嗜血阴狠', personalityEn: 'Brutal & vicious, bloodthirsty & sinister',
-    techniques: ['魔道秘术'], relations: [], firstAppearChapter: '大晋篇', firstAppearChapterEn: 'Great Jin Arc', status: 'deceased', tags: ['大晋'], ending: '被韩立击杀', endingEn: 'Killed by Han Li',
+    techniques: ['魔道秘术'], techniquesEn: ['Demonic Secret Art'], relations: [], firstAppearChapter: '大晋篇', firstAppearChapterEn: 'Great Jin Arc', status: 'deceased', tags: ['大晋'], ending: '被韩立击杀', endingEn: 'Killed by Han Li',
   },
   {
     id: 'tianlan-shengnv', name: '天澜圣女', nameEn: 'Tianlan Holy Maiden', aliases: [], aliasesEn: [], realm: '元婴期', realmEn: 'Nascent Soul',

@@ -28,8 +28,8 @@ export default function ArtifactsPage() {
                 <p className={styles.cardOwner}>
                   <span className={styles.label}>{t('artifacts.owner')}:</span>{' '}
                   {lang === 'zh'
-                    ? (item.ownerName ?? item.owner)
-                    : (item.ownerNameEn ?? item.ownerEn ?? item.ownerName ?? item.owner)}
+                    ? item.ownerName
+                    : (item.ownerNameEn ?? item.ownerName)}
                 </p>
                 <p className={styles.cardDesc}>{lang === 'zh' ? item.description : item.descriptionEn}</p>
                 <div className={styles.abilities}>

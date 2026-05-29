@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { useVideoBackground } from '../hooks/useVideoBackground';
 import HeroSection from '../components/home/HeroSection';
 import StatisticsPanel from '../components/home/StatisticsPanel';
 import HonorsPanel from '../components/home/HonorsPanel';
@@ -8,18 +8,7 @@ import InkBrush from '../components/common/InkBrush';
 import styles from './HomePage.module.css';
 
 export default function HomePage() {
-  useEffect(() => {
-    const root = document.getElementById('root');
-    const prevBg = document.body.style.background;
-    const prevPos = root?.style.position || '';
-    const prevZ = root?.style.zIndex || '';
-    document.body.style.background = 'transparent';
-    if (root) { root.style.position = 'relative'; root.style.zIndex = '1'; }
-    return () => {
-      document.body.style.background = prevBg;
-      if (root) { root.style.position = prevPos; root.style.zIndex = prevZ; }
-    };
-  }, []);
+  useVideoBackground();
 
   const video = createPortal(
     <video

@@ -33,8 +33,6 @@ export interface Artifact {
   grade?: string;
   gradeEn?: string;
   imageUrl?: string;
-  owner?: string;
-  ownerEn?: string;
   ownerId?: string;
   ownerName?: string;
   ownerNameEn?: string;

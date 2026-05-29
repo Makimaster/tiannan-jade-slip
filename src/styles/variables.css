@@ -29,6 +29,7 @@
   --space-section: 6rem;
   --space-block: 2rem;
   --content-max: 1200px;
+  --header-height: 64px;
 
   /* 字体 */
   --font-display: 'Ma Shan Zheng', 'ZCOOL KuaiLe', 'Noto Serif SC', serif;
