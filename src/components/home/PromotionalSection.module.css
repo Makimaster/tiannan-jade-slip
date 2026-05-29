@@ -24,6 +24,7 @@
 }
 
 .p {
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--ink-medium);
   line-height: 2;
@@ -60,6 +61,7 @@
 }
 
 .featureDesc {
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--ink-light);
   line-height: 1.7;

@@ -64,6 +64,7 @@
 }
 
 .honorIssuer {
+  font-family: var(--font-body);
   font-size: 0.8rem;
   color: var(--ink-faint);
 }

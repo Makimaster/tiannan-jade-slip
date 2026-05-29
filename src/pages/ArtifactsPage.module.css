@@ -67,6 +67,7 @@
 }
 
 .cardType, .cardOwner {
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--ink-medium);
   margin-bottom: 0.25rem;
@@ -79,6 +80,7 @@
 }
 
 .cardDesc {
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--ink-light);
   margin: 0.75rem 0;

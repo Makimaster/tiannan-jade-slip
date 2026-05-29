@@ -223,6 +223,7 @@
 }
 
 .passageText {
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--ink-medium);
   line-height: 1.8;

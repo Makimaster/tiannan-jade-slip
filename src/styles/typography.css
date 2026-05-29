@@ -1,6 +1,5 @@
 /* ===== Typography ===== */
-/* Google Fonts — 使用国内镜像 fonts.googleapis.cn 确保国内可访问 */
-@import url('https://fonts.googleapis.cn/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;700;900&family=ZCOOL+XiaoWei&display=swap');
+/* Google Fonts loaded via <link> in index.html for faster loading */
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
