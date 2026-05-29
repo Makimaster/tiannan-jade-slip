@@ -44,7 +44,6 @@ export const en: Record<string, string> = {
   'library.noResults': 'No matching scriptures found. Try a different query, fellow cultivator.',
   'library.empty': 'Enter a query to search the immortal archives.',
   'library.error': 'The library\'s spiritual veins are unstable. Please try again.',
-  'library.hotQuestions': 'Popular Queries',
   'library.hotQuestions': 'Popular Questions',
   'library.hotQ.0': "What is Han Li's cultivation level?",
   'library.hotQ.1': "What magical treasures does Han Li have?",
