@@ -1,0 +1,249 @@
+.page {
+  padding: var(--space-section) 0;
+  min-height: 80vh;
+  background: var(--rice-paper);
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Search Bar */
+.searchForm {
+  margin: 2.5rem 0 2rem;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--parchment);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.searchBar:focus-within {
+  border-color: var(--vermillion);
+  box-shadow: 0 0 0 3px rgba(192, 59, 59, 0.08);
+}
+
+.searchIcon {
+  margin-left: 1rem;
+  color: var(--ink-faint);
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink-full);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: var(--ink-faint);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+}
+
+.searchBtn {
+  padding: 0.9rem 1.8rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: var(--vermillion);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.searchBtn:hover:not(:disabled) {
+  background: var(--vermillion-dark);
+}
+
+.searchBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Hot Questions */
+.hotSection {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.hotTitle {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--ink-light);
+  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.hotGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.hotTag {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--ink-medium);
+  background: var(--parchment);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hotTag:hover {
+  color: var(--vermillion);
+  border-color: var(--vermillion);
+  background: rgba(192, 59, 59, 0.04);
+}
+
+/* Status Box */
+.statusBox {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(0, 0, 0, 0.08);
+  border-top-color: var(--vermillion);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.statusText {
+  font-family: var(--font-display);
+  color: var(--ink-light);
+  font-size: 1rem;
+}
+
+/* Results */
+.results {
+  margin-top: 1.5rem;
+}
+
+.resultMeta {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.resultMeta strong {
+  color: var(--vermillion);
+  font-family: var(--font-display);
+}
+
+.time {
+  color: var(--ink-faint);
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.resultList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Passage Card */
+.passageCard {
+  background: var(--parchment);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 1.2rem 1.5rem;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.passageCard:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.passageCard:nth-child(1) {
+  border-left-color: var(--vermillion);
+}
+
+.passageCard:nth-child(2) {
+  border-left-color: var(--vermillion);
+  opacity: 0.8;
+}
+
+.passageHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.passageIndex {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--vermillion);
+  min-width: 24px;
+}
+
+.passageChapter {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--jade);
+  font-family: var(--font-display);
+}
+
+.passageScore {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
+.passageText {
+  font-size: 0.9rem;
+  color: var(--ink-medium);
+  line-height: 1.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .searchBar {
+    flex-direction: column;
+    border-radius: 8px;
+  }
+
+  .searchBtn {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .passageText {
+    -webkit-line-clamp: 8;
+  }
+}

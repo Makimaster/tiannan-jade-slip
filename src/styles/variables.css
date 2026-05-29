@@ -1,0 +1,37 @@
+/* ===== CSS Variables — 暖色宣纸/墨色古风 ===== */
+:root {
+  /* 墨色系（文字用） */
+  --ink-full: #0d0d0d;
+  --ink-heavy: #1a1a1a;
+  --ink-medium: #3d3d3d;
+  --ink-light: #6b6b6b;
+  --ink-faint: #a0a0a0;
+
+  /* 强调色 */
+  --vermillion: #c03b3b;
+  --vermillion-dark: #8b1a1a;
+  --vermillion-light: #d4696a;
+  --gold: #c4a84b;
+  --gold-light: #e8d48b;
+  --gold-pale: #f2e8c8;
+  --jade: #5b8c5a;
+  --jade-light: #7dae7c;
+  --celadon: #b5c9b0;
+
+  /* 背景色调 */
+  --parchment: #f5f0e8;
+  --parchment-dark: #e8dfd0;
+  --parchment-darker: #d9ceb8;
+  --rice-paper: #fafaf7;
+  --rice-paper-dark: #f0ece4;
+
+  /* 间距 */
+  --space-section: 6rem;
+  --space-block: 2rem;
+  --content-max: 1200px;
+
+  /* 字体 */
+  --font-display: 'Ma Shan Zheng', 'ZCOOL KuaiLe', 'Noto Serif SC', serif;
+  --font-heading: 'ZCOOL XiaoWei', 'STKaiti', serif;
+  --font-body: 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif;
+}

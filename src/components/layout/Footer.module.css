@@ -1,0 +1,26 @@
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--rice-paper);
+  padding: 2rem;
+}
+
+.inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.divider {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--ink-faint);
+  margin: 0 auto 1rem;
+}
+
+.text {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  letter-spacing: 0.05em;
+}

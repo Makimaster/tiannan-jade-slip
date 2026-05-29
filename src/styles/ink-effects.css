@@ -1,0 +1,75 @@
+/* ===== Ink Effects — 水墨装饰 ===== */
+
+/* 水墨洗滤镜 */
+.ink-wash-image {
+  filter: grayscale(1) contrast(0.9) brightness(0.95);
+  mix-blend-mode: multiply;
+}
+
+.ink-wash-image-warm {
+  filter: grayscale(0.7) sepia(0.2) contrast(0.9) brightness(0.95);
+  mix-blend-mode: multiply;
+}
+
+/* 宣纸纹理背景 */
+.ink-texture-bg {
+  background-color: var(--parchment);
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* 墨迹边框 */
+.ink-border {
+  border: 1px solid var(--ink-faint);
+  position: relative;
+}
+
+.ink-border::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+
+/* 笔触下划线 */
+.brush-underline {
+  position: relative;
+  display: inline;
+}
+
+.brush-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--vermillion);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.brush-underline:hover::after,
+.brush-underline.visible::after {
+  transform: scaleX(1);
+}
+
+/* 朱砂印记（印章效果） */
+.seal-stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--vermillion);
+  color: var(--vermillion);
+  font-family: var(--font-display);
+  padding: 0.5em 0.8em;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+}
+
+.seal-stamp:hover {
+  transform: rotate(0deg);
+}
